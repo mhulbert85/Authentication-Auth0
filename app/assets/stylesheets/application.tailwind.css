@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-icon {
+    @apply w-full inline-flex justify-center py-2 px-4 border border-gray-300 
+    rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md 
+    shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .form-control {
+    @apply appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 
+    focus:outline-none focus:ring-slate-500 focus:border-slate-500 sm:text-sm;
+  }
+
+  .form-control:valid {
+    @apply block w-full pr-10 border-green-300 text-green-900 placeholder-green-300 focus:outline-none 
+    focus:ring-green-300 focus:border-green-500 sm:text-sm rounded-md;
+  }
+
+  .form-control:invalid {
+    @apply block w-full pr-10 border-red-300 text-red-900 placeholder-red-300 focus:outline-none 
+    focus:ring-red-300 focus:border-red-500 sm:text-sm rounded-md;
+  }
+
+  .hint {
+    @apply mt-2 text-xs text-gray-600;
+  }
+
+  .error-msg {
+    @apply mt-2 text-xs text-red-600;
+  }
+
+  .success-msg {
+    @apply mt-2 text-xs text-green-600;
+  }
+
+}
