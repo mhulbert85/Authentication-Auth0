@@ -22,10 +22,10 @@ class Users::Auth0Controller < ApplicationController
   def logout_url
     request_params = {
       returnTo: root_url,
-      client_id: Rails.application.credentials.auth0.client,
+      client_id: Rails.application.credentials.dig(:auth0, :client),
     }
 
-    uri = URI::HTTPS.build(host: Rails.application.credentials.auth0.domain, path: "/v2/logout", query: to_query(request_params)).to_s
+    uri = URI::HTTPS.build(host: Rails.application.credentials.dig(:auth0, :domain), path: "/v2/logout", query: to_query(request_params)).to_s
   end
 
   def to_query(hash)
